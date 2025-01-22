@@ -1,0 +1,14 @@
+name = "python_editor"
+version = "1.0.0"
+target = "javascript"
+description = "Edit and run Python in the browser"
+licences = ["Apache-2.0"]
+
+[dependencies]
+gleam_stdlib = ">= 0.44.0 and < 2.0.0"
+lustre = ">= 4.6.3 and < 5.0.0"
+gleam_javascript = ">= 0.13.0 and < 1.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
+lustre_dev_tools = ">= 1.6.5 and < 2.0.0"
