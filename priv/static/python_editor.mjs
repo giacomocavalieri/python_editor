@@ -2440,9 +2440,7 @@ function do_run_code(code2, on_output) {
   const canvas_field = document.getElementById("canvas");
   canvas_field.innerHTML = "";
   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = "canvas";
-  return Sk.misceval.asyncToPromise(
-    () => Sk.importMainWithBody("esercizio", false, code2, true)
-  );
+  return Sk.misceval.asyncToPromise(() => Sk.importMainWithBody("esercizio", false, code2, true));
 }
 function skulpt_error_to_string(error) {
   return error.toString();
