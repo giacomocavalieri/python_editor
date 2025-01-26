@@ -19493,7 +19493,7 @@ Sk.builtin.file.prototype["write"] = new Sk.builtin.func(function write(self, st
 
     return Sk.misceval.promiseToSuspension(new Promise((resume) => {
         Sk.setTimeout(() => resume(Sk.builtin.none.none$), 0)
-    }));    
+    }));
 });
 
 
