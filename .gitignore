@@ -5,3 +5,6 @@ erl_crash.dump
 
 .DS_Store
 */.DS_Store
+
+# Auto generated js code
+priv/static/python_editor.mjs
