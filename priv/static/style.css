@@ -87,9 +87,11 @@ a {
     border: 1px solid #888;
     box-shadow: 0.5rem 0.5rem 0 0 #00000030;
 
+    /*
     transition:
         box-shadow 0.3s ease-in-out,
         border-color 0.3s ease-in-out;
+    */
 }
 
 button {
@@ -125,9 +127,11 @@ button:active {
 
 .code-result {
     overflow: scroll;
+    /*
     transition:
         background-color 0.3s ease-in-out,
         border-color 0.3s ease-in-out;
+    */
 }
 
 .code-editor + .code-result {
