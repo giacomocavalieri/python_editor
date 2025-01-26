@@ -107,7 +107,7 @@ fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
         None | Some(FromPreviousRun(_)) -> FromCurrentRun(string)
       }
 
-      let model = Model(..model, output: Some(output))
+      let model = Model(..model, output: Some(output), outcome: None)
       #(model, effect.none())
     }
 
