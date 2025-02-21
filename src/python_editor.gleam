@@ -15,7 +15,7 @@ import lustre/event
 
 pub fn main() {
   let model =
-    read_from_session_storage("model")
+    read_from_local_storage("model")
     |> deserialise
     |> result.unwrap(default())
 
@@ -162,7 +162,7 @@ fn save_code(model: Model) -> Effect(msg) {
 
 fn save_model(model: Model) -> Effect(Msg) {
   use _dispatch <- effect.from
-  save_to_session_storage("model", serialise(model))
+  save_to_local_storage("model", serialise(model))
 }
 
 // --- VIEW --------------------------------------------------------------------
@@ -253,8 +253,8 @@ fn sha256_hash(data: String) -> Promise(BitArray)
 @external(javascript, "./python_editor.ffi.mjs", "save_file")
 fn save_file(file_name: String, content: String) -> Nil
 
-@external(javascript, "./python_editor.ffi.mjs", "read_from_session_storage")
-fn read_from_session_storage(key: String) -> String
+@external(javascript, "./python_editor.ffi.mjs", "read_from_local_storage")
+fn read_from_local_storage(key: String) -> String
 
-@external(javascript, "./python_editor.ffi.mjs", "save_to_session_storage")
-fn save_to_session_storage(key: String, value: String) -> Nil
+@external(javascript, "./python_editor.ffi.mjs", "save_to_local_storage")
+fn save_to_local_storage(key: String, value: String) -> Nil
